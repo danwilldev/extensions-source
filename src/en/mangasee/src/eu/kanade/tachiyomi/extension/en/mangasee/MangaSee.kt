@@ -15,7 +15,7 @@ class MangaSee : NepNep("MangaSee", "https://mangasee123.com", "en") {
     override val id: Long = 9
 
     override val client: OkHttpClient = network.cloudflareClient.newBuilder()
-        .rateLimit(1, 2)
+        .rateLimit(100, 1)
         .connectTimeout(1, TimeUnit.MINUTES)
         .readTimeout(1, TimeUnit.MINUTES)
         .writeTimeout(1, TimeUnit.MINUTES)
